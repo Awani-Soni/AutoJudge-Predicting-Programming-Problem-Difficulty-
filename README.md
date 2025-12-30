@@ -114,7 +114,10 @@ No authentication or database is required.
 
 ## 🖼️ Web Interface Screenshots
 
-!before_1(sample_web_interface_images/before_1.png)
+![before_1](sample_web_interface_images/before_1.png)
+![before_2](sample_web_interface_images/before_2.png)
+![after_1](sample_web_interface_images/after_1.png)
+![after_2](sample_web_interface_images/after_2.png)
 
 
 ---
