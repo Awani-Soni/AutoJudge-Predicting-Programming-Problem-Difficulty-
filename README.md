@@ -122,5 +122,9 @@ No authentication or database is required.
 
 ---
 
-## 📁 Project Structure
+## How to Run the Web App (Optional)
 
+```bash
+pip install streamlit scikit-learn pandas numpy scipy joblib
+streamlit run streamlit_acm_app.py
+```
