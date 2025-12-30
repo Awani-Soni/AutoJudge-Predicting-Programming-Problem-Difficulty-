@@ -126,5 +126,33 @@ No authentication or database is required.
 
 ```bash
 pip install streamlit scikit-learn pandas numpy scipy joblib
-streamlit run streamlit_acm_app.py
+streamlit run streamlit_app.py
 ```
+
+---
+
+## 📃 Project Structure
+
+AutoJudge/
+│
+├── AutoJudge.ipynb
+│   └── Model training, feature engineering, evaluation, and model saving (Colab)
+│
+├── streamlit_app.py
+│   └── Streamlit web application for difficulty prediction
+│
+├── models/
+│   ├── tfidf.pkl
+│   ├── logreg_classifier.pkl
+│   ├── gb_regressor.pkl
+│   └── label_encoder.pkl
+│   └── Saved models and preprocessing objects used by the web app
+│
+├── sample_web_interface_images/
+│   └── Screenshots of the Streamlit web interface
+│
+├── data.jsonl
+│   └── Dataset used for training and evaluation
+│
+└── README.md
+    └── Project documentation
