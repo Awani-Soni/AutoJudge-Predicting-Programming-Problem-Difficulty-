@@ -128,6 +128,7 @@ No authentication or database is required.
 pip install streamlit scikit-learn pandas numpy scipy joblib
 streamlit run streamlit_app.py
 ```
+> Note: Model file paths in streamlit_app.py are currently set as absolute paths. For reproduction on another system, update the paths to point to the local models/ directory.
 
 ---
 
