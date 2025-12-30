@@ -122,7 +122,7 @@ No authentication or database is required.
 
 ---
 
-## How to Run the Web App (Optional)
+## How to Run the Web App
 
 ```bash
 pip install streamlit scikit-learn pandas numpy scipy joblib
