@@ -34,7 +34,7 @@ Each data sample contains:
 - `problem_class` (Easy / Medium / Hard)
 - `problem_score` (numerical)
 
-The dataset is provided and **no manual labeling is required**.
+The provided dataset is used and **no manual labeling is required**.
 
 ---
 
@@ -95,20 +95,88 @@ Deep learning was **not used**, as per project guidelines.
 
 ---
 
+## ▶️ Steps to Run the Project Locally
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/Awani-Soni/AutoJudge-Predicting-Programming-Problem-Difficulty-
+```
+
+---
+
+### Step 2: Install Required Dependencies
+
+Make sure Python (3.8+) is installed.
+
+```bash
+pip install streamlit scikit-learn pandas numpy scipy joblib
+```
+---
+
+### Step 3: (Optional) Reproduce Model Training
+
+If you want to retrain the models from scratch:
+
+- Open AutoJudge_Model.ipynb
+- Update base path according to your system like:
+```bash
+BASE_PATH = "/content/drive/MyDrive/ACM_Project"
+```
+
+- Run all cells sequentially
+- Trained models will be saved inside the {BASE_PATH}/ directory
+
+> Note: Changing paths is necessary because absolute paths depend on the local system.
+
+---
+
+### Step 4: Run the Streamlit Web Application
+
+- Open streamlit_app.py
+- Update model paths to match your local directory structure, for example:
+
+```bash
+best_lr = joblib.load(r"{BASE_PATH}\logreg_classifier.pkl")
+gb_final = joblib.load(r"{BASE_PATH}\gb_regressor.pkl")
+tfidf = joblib.load(r"{BASE_PATH}\tfidf.pkl")
+le = joblib.load(r"{BASE_PATH}\label_encoder.pkl")
+```
+
+- Run the app:
+
+```bash
+streamlit run streamlit_app.py
+```
+---
+
+### Step 5: Use the Application
+
+- Paste problem description, input description, and output description
+- Click Predict
+- View predicted:
+  - Difficulty Class (Easy / Medium / Hard)
+  - Difficulty Score
+
+
+---
 ## 🌐 Web Interface (Streamlit)
 
-A simple Streamlit web app allows users to:
+The web interface is built using Streamlit and provides a simple user workflow:
 
-1. Paste:
+1. Three text boxes allow users to paste:
    - Problem description
    - Input description
    - Output description
-2. Click **Predict**
-3. View:
+2. On clicking the **Predict** button:
+   - The text is preprocessed
+   - TF-IDF and handcrafted features are generated
+   - The trained classification and regression models are used
+4. The app displays:
    - Predicted difficulty class
-   - Predicted difficulty score
+   - Predicted numerical difficulty score
 
-No authentication or database is required.
+The interface runs locally, and no deployment or database is required.
 
 ---
 
@@ -119,16 +187,6 @@ No authentication or database is required.
 ![after_1](sample_web_interface_images/after_1.png)
 ![after_2](sample_web_interface_images/after_2.png)
 
-
----
-
-## How to Run the Web App
-
-```bash
-pip install streamlit scikit-learn pandas numpy scipy joblib
-streamlit run streamlit_app.py
-```
-> Note: Model file paths in streamlit_app.py are currently set as absolute paths. For reproduction on another system, update the paths to point to the local models/ directory.
 
 ---
 
@@ -159,5 +217,5 @@ streamlit run streamlit_app.py
 
 ## Author
 
-**Awani Soni**  
-IIT Roorkee
+**Awani Soni (23322008)** 
+BS-MS Economics, IIT Roorkee
