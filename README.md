@@ -180,6 +180,11 @@ The interface runs locally, and no deployment or database is required.
 
 ---
 
+##  Demo Video
+[Click here to watch the demo](https://drive.google.com/file/d/10gJqzU5c2gKNigUkrlVgNTJax3S613P_/view?usp=drive_link)
+
+---
+
 ## 🖼️ Web Interface Screenshots
 
 ![before_1](sample_web_interface_images/before_1.png)
