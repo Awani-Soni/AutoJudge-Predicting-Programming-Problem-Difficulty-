@@ -217,5 +217,4 @@ The interface runs locally, and no deployment or database is required.
 
 ## Author
 
-**Awani Soni (23322008)** 
-BS-MS Economics, IIT Roorkee
+**Awani Soni (23322008)** , BS-MS Economics, IIT Roorkee
