@@ -31,6 +31,7 @@ Each data sample contains:
 - `description`
 - `input_description`
 - `output_description`
+- `sample_io`
 - `problem_class` (Easy / Medium / Hard)
 - `problem_score` (numerical)
 
